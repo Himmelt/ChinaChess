@@ -1,0 +1,16 @@
+[
+{
+  "modid": "chinachess",
+  "name": "ChinaChess",
+  "description": "Forge Mod",
+  "version": "${version}",
+  "mcversion": "${mcversion}",
+  "url": "https://github.com/Himmelt/ChinaChess",
+  "updateUrl": "https://github.com/Himmelt/ChinaChess/releases",
+  "authorList": ["Himmelt"],
+  "credits": "The Forge and FML guys, for making this example",
+  "logoFile": "",
+  "screenshots": [],
+  "dependencies": []
+}
+]

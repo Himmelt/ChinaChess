@@ -1,0 +1,13 @@
+### Example user template
+
+.idea
+.gradle
+build
+run
+out
+
+# IntelliJ project files
+*.zip
+*.iml
+*.ipr
+*.iws
