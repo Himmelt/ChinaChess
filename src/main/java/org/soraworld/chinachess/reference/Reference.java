@@ -19,13 +19,15 @@ public final class Reference {
 
         // 空白棋子
         // 各类棋子
-        public static final String board = "board";
+        public static final String chess = "chinaChess";
         // 空白棋盘
         // 各类棋盘
-
+        public static final String board = "chessBoard";
     }
 
     public static final class Items{
 
+        // 材料晶尘
+        public static final String dust = "dust";
     }
 }

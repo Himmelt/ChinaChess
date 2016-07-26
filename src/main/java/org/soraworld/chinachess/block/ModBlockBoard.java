@@ -55,6 +55,6 @@ public class ModBlockBoard extends ModBlock {
     @Override
     public IIcon getIcon(int side, int meta)
     {
-        return icons[meta];
+        return side == 1 ? icons[meta] : icons[0];
     }
 }

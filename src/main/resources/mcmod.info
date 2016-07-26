@@ -2,7 +2,7 @@
 {
   "modid": "chinachess",
   "name": "ChinaChess",
-  "description": "Forge Mod",
+  "description": "China Chess",
   "version": "${version}",
   "mcversion": "${mcversion}",
   "url": "https://github.com/Himmelt/ChinaChess",

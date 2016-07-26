@@ -11,15 +11,21 @@ import cpw.mods.fml.relauncher.SideOnly;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.creativetab.CreativeTabs;
+import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
+import net.minecraft.util.MathHelper;
+import net.minecraft.world.World;
 import org.soraworld.chinachess.creativetab.ModCreativeTab;
 import org.soraworld.chinachess.reference.Reference;
+import org.soraworld.chinachess.registry.ModRegistry;
 
 import java.util.List;
 
 public class ModBlock extends Block {
-    
+
+    protected int rotation = 0;
+
     public ModBlock(){
         super(Material.rock);
         this.setCreativeTab(ModCreativeTab.ModTab).setResistance(4.0F).setStepSound(soundTypeStone).setHardness(4.0F);
@@ -28,6 +34,16 @@ public class ModBlock extends Block {
     public ModBlock(String name){
         this();
         this.setBlockName(name).setBlockTextureName(name);
+    }
+
+    public int getRotation() {
+        return rotation;
+    }
+
+    @SideOnly(Side.CLIENT)
+    @Override
+    public int getRenderType() {
+        return ModRegistry.modRenderId;
     }
 
     @Override
@@ -55,4 +71,9 @@ public class ModBlock extends Block {
 //        return "tile."+ Reference.MODID + ":" + super.getUnlocalizedName().substring(super.getUnlocalizedName().indexOf(".") + 1);
 //    }
 
+    @Override
+    public void onBlockPlacedBy(World world, int x, int y, int z, EntityLivingBase entity, ItemStack itemStack) {
+        int l = MathHelper.floor_double((double) (entity.rotationYaw * 4.0F / 360.0F) + 2.5D) & 3;
+        world.setBlockMetadataWithNotify(x, y, z, l, 2);
+    }
 }
