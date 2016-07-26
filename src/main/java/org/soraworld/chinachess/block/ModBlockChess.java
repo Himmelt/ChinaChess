@@ -4,7 +4,7 @@
  * https://opensource.org/licenses/MIT
  ******************************************************************************/
 
-package org.soraworld.chinachess.blocks;
+package org.soraworld.chinachess.block;
 
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;

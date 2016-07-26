@@ -4,12 +4,7 @@
  * https://opensource.org/licenses/MIT
  ******************************************************************************/
 
-package org.soraworld.chinachess.items;
+package org.soraworld.chinachess.event;
 
-import net.minecraft.item.Item;
-
-public class CrystalDust extends Item{
-
-
-
+public class ModEvent {
 }

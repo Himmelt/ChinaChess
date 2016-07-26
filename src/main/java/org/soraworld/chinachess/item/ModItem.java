@@ -4,7 +4,7 @@
  * https://opensource.org/licenses/MIT
  ******************************************************************************/
 
-package org.soraworld.chinachess.items;
+package org.soraworld.chinachess.item;
 
 public class ModItem {
 }

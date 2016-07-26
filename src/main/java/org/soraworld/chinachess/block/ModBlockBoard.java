@@ -4,15 +4,13 @@
  * https://opensource.org/licenses/MIT
  ******************************************************************************/
 
-package org.soraworld.chinachess.blocks;
+package org.soraworld.chinachess.block;
 
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
-import net.minecraft.block.BlockColored;
 import net.minecraft.client.renderer.texture.IIconRegister;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
-import net.minecraft.item.ItemDye;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.IIcon;
 
@@ -20,7 +18,10 @@ import java.util.List;
 
 public class ModBlockBoard extends ModBlock {
 
-    private int subBlocks = 1;
+    private static final int subBlocks = 11;
+
+    @SideOnly(Side.CLIENT)
+    private IIcon[] icons = new IIcon[subBlocks];
 
     protected ModBlockBoard(){
         this.setLightLevel(1.0F).setLightOpacity(0);
@@ -34,13 +35,14 @@ public class ModBlockBoard extends ModBlock {
     @SideOnly(Side.CLIENT)
     public void registerBlockIcons(IIconRegister iconRegister)
     {
-        IIcon[] icons = new IIcon[subBlocks];
         for (int i = 0; i < subBlocks; ++i){
-            icons[i] = iconRegister.registerIcon(this.getTextureName() + "_" + i);
+            icons[i] = iconRegister.registerIcon(this.getTextureName() + "." + i);
         }
     }
 
     @SideOnly(Side.CLIENT)
+    @Override
+    @SuppressWarnings("unchecked")
     public void getSubBlocks(Item item, CreativeTabs creativeTab, List list)
     {
         for (int i = 0; i < subBlocks; ++i)
@@ -49,4 +51,10 @@ public class ModBlockBoard extends ModBlock {
         }
     }
 
+    @SideOnly(Side.CLIENT)
+    @Override
+    public IIcon getIcon(int side, int meta)
+    {
+        return icons[meta];
+    }
 }
