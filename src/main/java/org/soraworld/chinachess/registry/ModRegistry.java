@@ -19,7 +19,7 @@ public class ModRegistry {
     public static int modRenderId;
 
     public static void registerBlocks() {
-        GameRegistry.registerBlock(new ModBlockBoard(Reference.Blocks.board), ModItemBlock.class, Reference.Blocks.board);
+        GameRegistry.registerBlock(new ModBlockBoard(Reference.Blocks.board), Reference.Blocks.board);
     }
 
     public static void registerRenders() {

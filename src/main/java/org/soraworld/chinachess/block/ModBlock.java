@@ -16,6 +16,7 @@ import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.MathHelper;
 import net.minecraft.world.World;
+import org.lwjgl.Sys;
 import org.soraworld.chinachess.creativetab.ModCreativeTab;
 import org.soraworld.chinachess.reference.Reference;
 import org.soraworld.chinachess.registry.ModRegistry;
@@ -23,8 +24,6 @@ import org.soraworld.chinachess.registry.ModRegistry;
 import java.util.List;
 
 public class ModBlock extends Block {
-
-    protected int rotation = 0;
 
     public ModBlock(){
         super(Material.rock);
@@ -34,10 +33,6 @@ public class ModBlock extends Block {
     public ModBlock(String name){
         this();
         this.setBlockName(name).setBlockTextureName(name);
-    }
-
-    public int getRotation() {
-        return rotation;
     }
 
     @SideOnly(Side.CLIENT)
@@ -50,14 +45,6 @@ public class ModBlock extends Block {
     public int damageDropped(int damage)
     {
         return damage;
-    }
-
-    @SideOnly(Side.CLIENT)
-    @Override
-    @SuppressWarnings("unchecked")
-    public void getSubBlocks(Item item, CreativeTabs creativeTab, List list)
-    {
-        list.add(new ItemStack(item, 1, 0));
     }
 
     @Override
@@ -73,7 +60,7 @@ public class ModBlock extends Block {
 
     @Override
     public void onBlockPlacedBy(World world, int x, int y, int z, EntityLivingBase entity, ItemStack itemStack) {
-        int l = MathHelper.floor_double((double) (entity.rotationYaw * 4.0F / 360.0F) + 2.5D) & 3;
-        world.setBlockMetadataWithNotify(x, y, z, l, 2);
+        int direction = MathHelper.floor_double((double) (entity.rotationYaw * 4.0F / 360.0F) + 2.5D) & 3;
+        world.setBlockMetadataWithNotify(x, y, z, direction, 2);
     }
 }

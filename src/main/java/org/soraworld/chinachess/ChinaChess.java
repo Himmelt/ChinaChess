@@ -19,6 +19,7 @@ import org.soraworld.chinachess.reference.Reference;
         version = Reference.VERSION,
         acceptedMinecraftVersions = Reference.ACMCVERSION)
 
+/// China Chess 中国象棋 Mod
 public class ChinaChess {
 
     @Mod.Instance(Reference.MODID)

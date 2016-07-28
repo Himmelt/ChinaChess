@@ -18,11 +18,6 @@ import java.util.List;
 
 public class ModBlockBoard extends ModBlock {
 
-    private static final int subBlocks = 11;
-
-    @SideOnly(Side.CLIENT)
-    private IIcon[] icons = new IIcon[subBlocks];
-
     protected ModBlockBoard(){
         this.setLightLevel(1.0F).setLightOpacity(0);
     }
@@ -32,29 +27,4 @@ public class ModBlockBoard extends ModBlock {
         this.setBlockName(Name).setBlockTextureName(Name);
     }
 
-    @SideOnly(Side.CLIENT)
-    public void registerBlockIcons(IIconRegister iconRegister)
-    {
-        for (int i = 0; i < subBlocks; ++i){
-            icons[i] = iconRegister.registerIcon(this.getTextureName() + "." + i);
-        }
-    }
-
-    @SideOnly(Side.CLIENT)
-    @Override
-    @SuppressWarnings("unchecked")
-    public void getSubBlocks(Item item, CreativeTabs creativeTab, List list)
-    {
-        for (int i = 0; i < subBlocks; ++i)
-        {
-            list.add(new ItemStack(item, 1, i));
-        }
-    }
-
-    @SideOnly(Side.CLIENT)
-    @Override
-    public IIcon getIcon(int side, int meta)
-    {
-        return side == 1 ? icons[meta] : icons[0];
-    }
 }

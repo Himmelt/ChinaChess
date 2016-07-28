@@ -5,6 +5,7 @@
 build
 run
 out
+lib
 
 # IntelliJ project files
 *.zip
