@@ -4,6 +4,7 @@
 
 中国象棋Mod
 
+
 ### render type list
     //The type of render function that is called for this block
     public int getRenderType()
@@ -48,4 +49,3 @@
     33 - FlowerPot
     34 - Beacon
     35 - Anvil
-    
