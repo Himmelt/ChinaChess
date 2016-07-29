@@ -7,4 +7,5 @@
 package org.soraworld.chinachess.item;
 
 public class ModItem {
+
 }

@@ -1,15 +1,30 @@
-
+# 中国象棋mod
+itemGroup.chinachess=中国象棋
 # 棋盘
-tile.chessBoard.0.name=棋盘[ ]
-tile.chessBoard.1.name=棋盘[L]
-tile.chessBoard.2.name=棋盘[T]
-tile.chessBoard.3.name=棋盘[T.]
-tile.chessBoard.4.name=棋盘[.T]
-tile.chessBoard.5.name=棋盘[┼]
-tile.chessBoard.6.name=棋盘[┼.]
-tile.chessBoard.7.name=棋盘[X]
-tile.chessBoard.8.name=棋盘[-]
-tile.chessBoard.9.name=棋盘[╬]
-tile.chessBoard.10.name=棋盘[╦]
+tile.chessBoard.0.name=§e§l棋盘[ ]§r
+tile.chessBoard.1.name=§e§l棋盘[L]§r
+tile.chessBoard.2.name=§e§l棋盘[T]§r
+tile.chessBoard.3.name=§e§l棋盘[T.]§r
+tile.chessBoard.4.name=§e§l棋盘[.T]§r
+tile.chessBoard.5.name=§e§l棋盘[┼]§r
+tile.chessBoard.6.name=§e§l棋盘[┼.]§r
+tile.chessBoard.7.name=§e§l棋盘[X]§r
+tile.chessBoard.8.name=§e§l棋盘[-]§r
+tile.chessBoard.9.name=§e§l棋盘[╬]§r
+tile.chessBoard.10.name=§e§l棋盘[╦]§r
+# 棋子
+tile.chinaChess.0.red.name=§c§l帅§r
+tile.chinaChess.1.red.name=§c§l仕§r
+tile.chinaChess.2.red.name=§c§l相§r
+tile.chinaChess.3.red.name=§c§l马§r
+tile.chinaChess.4.red.name=§c§l车§r
+tile.chinaChess.5.red.name=§c§l炮§r
+tile.chinaChess.6.red.name=§c§l兵§r
 
-
+tile.chinaChess.0.blue.name=§b§l将§r
+tile.chinaChess.1.blue.name=§b§l士§r
+tile.chinaChess.2.blue.name=§b§l象§r
+tile.chinaChess.3.blue.name=§b§l馬§r
+tile.chinaChess.4.blue.name=§b§l車§r
+tile.chinaChess.5.blue.name=§b§l砲§r
+tile.chinaChess.6.blue.name=§b§l卒§r

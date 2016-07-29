@@ -4,7 +4,6 @@
 
 中国象棋Mod
 
-
 ### render type list
     //The type of render function that is called for this block
     public int getRenderType()
@@ -49,3 +48,5 @@
     33 - FlowerPot
     34 - Beacon
     35 - Anvil
+    
+ bukkit 弑神剑 [神造兵器·不可复制]无视保护 一击必杀，但只有10次，每次10秒，全服一把

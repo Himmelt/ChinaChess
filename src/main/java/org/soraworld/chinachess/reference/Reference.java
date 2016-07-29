@@ -23,6 +23,9 @@ public final class Reference {
         // 空白棋盘
         // 各类棋盘
         public static final String board = "chessBoard";
+
+        public static final String[] factions = {"red","blue"};
+
     }
 
     public static final class Items{
@@ -30,4 +33,5 @@ public final class Reference {
         // 材料晶尘
         public static final String dust = "dust";
     }
+
 }

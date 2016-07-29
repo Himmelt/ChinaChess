@@ -7,4 +7,5 @@
 package org.soraworld.chinachess.event;
 
 public class ModEvent {
+
 }

@@ -17,7 +17,7 @@ import org.lwjgl.opengl.GL11;
 import org.soraworld.chinachess.registry.ModRegistry;
 
 @SideOnly(Side.CLIENT)
-public class ModRender implements ISimpleBlockRenderingHandler {
+public class ModRenderChess implements ISimpleBlockRenderingHandler {
 
     @Override
     public void renderInventoryBlock(Block block, int metadata, int modelId, RenderBlocks renderer) {
@@ -29,7 +29,7 @@ public class ModRender implements ISimpleBlockRenderingHandler {
     @Override
     public boolean renderWorldBlock(IBlockAccess world, int x, int y, int z, Block block, int modelId, RenderBlocks renderer) {
         renderer.setRenderBoundsFromBlock(block);
-        switch (world.getBlockMetadata(x,y,z)){
+        switch (world.getBlockMetadata(x,y,z) & 3){
             case 1: renderer.uvRotateTop = 1;break;
             case 2: renderer.uvRotateTop = 3;break;
             case 3: renderer.uvRotateTop = 2;break;
@@ -52,6 +52,7 @@ public class ModRender implements ISimpleBlockRenderingHandler {
 
     private void renderInInventory(Tessellator tessellator, RenderBlocks renderer, Block block, int metadata)
     {
+        metadata = metadata << 3;
         GL11.glTranslatef(-0.5F, -0.5F, -0.5F);
         tessellator.startDrawingQuads();
         tessellator.setNormal(0.0F, -1F, 0.0F);

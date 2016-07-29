@@ -10,6 +10,4 @@ import net.minecraft.item.Item;
 
 public class CrystalDust extends Item{
 
-
-
 }

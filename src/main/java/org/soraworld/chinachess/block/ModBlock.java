@@ -10,18 +10,9 @@ import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
-import net.minecraft.creativetab.CreativeTabs;
-import net.minecraft.entity.EntityLivingBase;
-import net.minecraft.item.Item;
-import net.minecraft.item.ItemStack;
-import net.minecraft.util.MathHelper;
-import net.minecraft.world.World;
-import org.lwjgl.Sys;
 import org.soraworld.chinachess.creativetab.ModCreativeTab;
 import org.soraworld.chinachess.reference.Reference;
 import org.soraworld.chinachess.registry.ModRegistry;
-
-import java.util.List;
 
 public class ModBlock extends Block {
 
@@ -33,6 +24,11 @@ public class ModBlock extends Block {
     public ModBlock(String name){
         this();
         this.setBlockName(name).setBlockTextureName(name);
+    }
+
+    @Override
+    protected String getTextureName(){
+        return Reference.MODID + ":" + super.getTextureName();
     }
 
     @SideOnly(Side.CLIENT)
@@ -47,20 +43,4 @@ public class ModBlock extends Block {
         return damage;
     }
 
-    @Override
-    protected String getTextureName(){
-        return Reference.MODID + ":" + super.getTextureName();
-    }
-
-//    @Override
-//    public String getUnlocalizedName()
-//    {
-//        return "tile."+ Reference.MODID + ":" + super.getUnlocalizedName().substring(super.getUnlocalizedName().indexOf(".") + 1);
-//    }
-
-    @Override
-    public void onBlockPlacedBy(World world, int x, int y, int z, EntityLivingBase entity, ItemStack itemStack) {
-        int direction = MathHelper.floor_double((double) (entity.rotationYaw * 4.0F / 360.0F) + 2.5D) & 3;
-        world.setBlockMetadataWithNotify(x, y, z, direction, 2);
-    }
 }

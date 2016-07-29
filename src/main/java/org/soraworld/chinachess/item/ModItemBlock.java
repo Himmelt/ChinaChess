@@ -10,15 +10,12 @@ import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 import net.minecraft.block.Block;
 import net.minecraft.item.ItemBlock;
-import net.minecraft.item.ItemStack;
 import net.minecraft.util.IIcon;
 
 public class ModItemBlock extends ItemBlock {
 
     public ModItemBlock(Block block) {
         super(block);
-        this.setMaxDamage(0);
-        this.setHasSubtypes(true);
     }
 
     @SideOnly(Side.CLIENT)
@@ -34,9 +31,4 @@ public class ModItemBlock extends ItemBlock {
         return meta;
     }
 
-    @Override
-    public String getUnlocalizedName(ItemStack itemStack)
-    {
-        return super.getUnlocalizedName() + "." + itemStack.getItemDamage();
-    }
 }

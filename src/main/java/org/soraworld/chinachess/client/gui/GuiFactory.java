@@ -7,4 +7,5 @@
 package org.soraworld.chinachess.client.gui;
 
 public class GuiFactory {
+
 }
