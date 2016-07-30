@@ -8,6 +8,6 @@ package org.soraworld.chinachess.item;
 
 import net.minecraft.item.Item;
 
-public class CrystalDust extends Item{
+public class ModItemCrystaldust extends Item{
 
 }

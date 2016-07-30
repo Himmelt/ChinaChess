@@ -9,12 +9,14 @@ package org.soraworld.chinachess.proxy;
 import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
+import org.soraworld.chinachess.registry.ModRegistry;
 
 public class ClientProxy extends CommonProxy{
 
     @Override
     public void preInit(FMLPreInitializationEvent event) {
         super.preInit(event);
+        ModRegistry.registerRenders();
     }
 
     @Override

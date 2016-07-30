@@ -7,16 +7,16 @@
 package org.soraworld.chinachess.creativetab;
 
 import net.minecraft.creativetab.CreativeTabs;
-import net.minecraft.init.Blocks;
 import net.minecraft.item.Item;
 import org.soraworld.chinachess.reference.Reference;
+import org.soraworld.chinachess.registry.ModRegistry;
 
 public class ModCreativeTab {
 
     public static final CreativeTabs ModTab = new CreativeTabs(Reference.MODID) {
         @Override
         public Item getTabIconItem() {
-            return Item.getItemFromBlock(Blocks.stone);
+            return Item.getItemFromBlock(ModRegistry.creativeTab);
         }
     };
 }

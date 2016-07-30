@@ -1,0 +1,30 @@
+# China Chess Mod
+itemGroup.chinachess=China Chess
+# Chess Board
+tile.chessBoard.0.name=§e§lChess Board[ ]§r
+tile.chessBoard.1.name=§e§lChess Board[L]§r
+tile.chessBoard.2.name=§e§lChess Board[T]§r
+tile.chessBoard.3.name=§e§lChess Board[T.]§r
+tile.chessBoard.4.name=§e§lChess Board[.T]§r
+tile.chessBoard.5.name=§e§lChess Board[┼]§r
+tile.chessBoard.6.name=§e§lChess Board[┼.]§r
+tile.chessBoard.7.name=§e§lChess Board[X]§r
+tile.chessBoard.8.name=§e§lChess Board[-]§r
+tile.chessBoard.9.name=§e§lChess Board[╬]§r
+tile.chessBoard.10.name=§e§lChess Board[╦]§r
+# Red Chesses
+tile.chinaChess.0.red.name=§c§lRed Queen§r
+tile.chinaChess.1.red.name=§c§lRed Mandarin§r
+tile.chinaChess.2.red.name=§c§lRed Bishop§r
+tile.chinaChess.3.red.name=§c§lRed Knight§r
+tile.chinaChess.4.red.name=§c§lRed Rook§r
+tile.chinaChess.5.red.name=§c§lRed Cannon§r
+tile.chinaChess.6.red.name=§c§lRed Pawn§r
+# Blue Chesses
+tile.chinaChess.0.blue.name=§b§lBlue King§r
+tile.chinaChess.1.blue.name=§b§lBlue Mandarin§r
+tile.chinaChess.2.blue.name=§b§lBlue Bishop§r
+tile.chinaChess.3.blue.name=§b§lBlue Knight§r
+tile.chinaChess.4.blue.name=§b§lBlue Rook§r
+tile.chinaChess.5.blue.name=§b§lBlue Cannon§r
+tile.chinaChess.6.blue.name=§b§lBlue Pawn§r

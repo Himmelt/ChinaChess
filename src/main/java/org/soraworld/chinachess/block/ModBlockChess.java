@@ -17,21 +17,28 @@ import net.minecraft.util.IIcon;
 import net.minecraft.util.MathHelper;
 import net.minecraft.world.World;
 import org.soraworld.chinachess.reference.Reference;
+import org.soraworld.chinachess.registry.ModRegistry;
 
 import java.util.List;
 
 public class ModBlockChess extends ModBlock {
 
-    @SideOnly(Side.CLIENT)
-    private IIcon[] icons = new IIcon[2];
+//    @SideOnly(Side.CLIENT)
+    protected IIcon[] icons = new IIcon[2];
 
     protected ModBlockChess(){
-        this.setLightLevel(1.0F).setLightOpacity(0);
+        this.setLightOpacity(0).setResistance(0.4F).setHardness(0.4F);
     }
 
     public ModBlockChess(String Name){
         this();
         this.setBlockName(Name).setBlockTextureName(Name);
+    }
+
+    @SideOnly(Side.CLIENT)
+    @Override
+    public int getRenderType() {
+        return ModRegistry.renderChessId;
     }
 
     /* opaque 是否为非透明方块 --- 是 */
@@ -40,9 +47,7 @@ public class ModBlockChess extends ModBlock {
         return false;
     }
 
-    /**
-     * Returns which pass should this block be rendered on. 0 for solids and 1 for alpha
-     */
+    // Returns which pass should this block be rendered on. 0 for solids and 1 for alpha
     @SideOnly(Side.CLIENT)
     @Override
     public int getRenderBlockPass()

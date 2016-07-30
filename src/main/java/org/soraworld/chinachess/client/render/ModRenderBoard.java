@@ -1,5 +1,5 @@
 /*******************************************************************************
- * Created by Himmelt on 2016/7/25.
+ * Created by Himmelt on 2016/7/30.
  * Copyright (c) 2015-2016. Himmelt All rights reserved.
  * https://opensource.org/licenses/MIT
  ******************************************************************************/
@@ -17,7 +17,7 @@ import org.lwjgl.opengl.GL11;
 import org.soraworld.chinachess.registry.ModRegistry;
 
 @SideOnly(Side.CLIENT)
-public class ModRenderChess implements ISimpleBlockRenderingHandler {
+public class ModRenderBoard implements ISimpleBlockRenderingHandler {
 
     @Override
     public void renderInventoryBlock(Block block, int metadata, int modelId, RenderBlocks renderer) {
@@ -29,7 +29,7 @@ public class ModRenderChess implements ISimpleBlockRenderingHandler {
     @Override
     public boolean renderWorldBlock(IBlockAccess world, int x, int y, int z, Block block, int modelId, RenderBlocks renderer) {
         renderer.setRenderBoundsFromBlock(block);
-        switch (world.getBlockMetadata(x,y,z) & 3){
+        switch (world.getBlockMetadata(x,y,z)){
             case 1: renderer.uvRotateTop = 1;break;
             case 2: renderer.uvRotateTop = 3;break;
             case 3: renderer.uvRotateTop = 2;break;
@@ -81,3 +81,4 @@ public class ModRenderChess implements ISimpleBlockRenderingHandler {
         GL11.glTranslatef(0.5F, 0.5F, 0.5F);
     }
 }
+

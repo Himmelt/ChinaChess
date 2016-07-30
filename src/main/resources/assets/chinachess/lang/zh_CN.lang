@@ -12,7 +12,7 @@ tile.chessBoard.7.name=§e§l棋盘[X]§r
 tile.chessBoard.8.name=§e§l棋盘[-]§r
 tile.chessBoard.9.name=§e§l棋盘[╬]§r
 tile.chessBoard.10.name=§e§l棋盘[╦]§r
-# 棋子
+# 红棋
 tile.chinaChess.0.red.name=§c§l帅§r
 tile.chinaChess.1.red.name=§c§l仕§r
 tile.chinaChess.2.red.name=§c§l相§r
@@ -20,7 +20,7 @@ tile.chinaChess.3.red.name=§c§l马§r
 tile.chinaChess.4.red.name=§c§l车§r
 tile.chinaChess.5.red.name=§c§l炮§r
 tile.chinaChess.6.red.name=§c§l兵§r
-
+# 黑棋
 tile.chinaChess.0.blue.name=§b§l将§r
 tile.chinaChess.1.blue.name=§b§l士§r
 tile.chinaChess.2.blue.name=§b§l象§r
